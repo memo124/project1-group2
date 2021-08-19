@@ -5,6 +5,10 @@
  */
 package UserInterface;
 
+import org.kodigo.project1.group2.views.UpdateFlight;
+import org.kodigo.project1.group2.views.WeatherReport;
+
+
 /**
  *
  * @author Danny
@@ -61,8 +65,13 @@ public class ManagementFlight extends javax.swing.JFrame {
         });
 
         jButton4.setText("Weather Report");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
 
-        jButton5.setText("Flight List");
+        jButton5.setText("Cancel Flight");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton5ActionPerformed(evt);
@@ -137,7 +146,8 @@ public class ManagementFlight extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-
+        UpdateFlight flight = new UpdateFlight();
+        flight.setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -148,6 +158,11 @@ public class ManagementFlight extends javax.swing.JFrame {
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        WeatherReport flight = new WeatherReport();
+        flight.setVisible(true);
+    }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
      * @param args the command line arguments
